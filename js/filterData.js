@@ -11,12 +11,12 @@ for(var i=0; i < 24; ++i) {
 m.data = [[]];
 m.series = [];
 
-var hj = new Date();
+var ontem = new Date("2020-12-16T03:00:00.000Z");
 //m.series.push(hj.toString());
-var ano = hj.getFullYear(), mes = hj.getMonth()+1, dia = hj.getDate()+1;
+var ano = ontem.getFullYear(), mes = ontem.getMonth()+1, dia = ontem.getDate()+1;
 var hour = '';
 
-//var msg = {};
+var msg = {};
 let data;
 
 msg.payload.forEach((elem, idx) => {
@@ -24,7 +24,7 @@ msg.payload.forEach((elem, idx) => {
     data = new Date(elem.recvTime);
     
     if(ano == data.getFullYear() && mes == data.getMonth()+1 && dia == data.getDate()) {
-        console.log(ano);
+        
         var hour = data.getHours();
         //m.series.push(hour);
         if(hour === 0) {
@@ -115,4 +115,3 @@ for(i=0; i<24;++i) {
 }
 
 return {payload:[m],topic:msg.topic};
-
