@@ -23,7 +23,7 @@ while True:
     print("Enviando dados para IoTSmartReginaLabDC:temp")
     v_l1n = uniform(216, 220)
     print("Tensao -> {:.1f}".format(v_l1n))
-    client.publish("/iot/IoTSmartReginaLabDC:temp/attrs/v_l1n", "{:.2f}".format(v_l1n))#publish
+    client.publish("/iot/IoTSmartReginaLabDC:temp/attrs/v_l1n", "{:.1f}".format(v_l1n))#publish
     client.publish("/iot/IoTSmartReginaLabDC:temp/attrs/v_l2n","0.0")#publish
     client.publish("/iot/IoTSmartReginaLabDC:temp/attrs/v_l3n","0.0")#publish
     client.publish("/iot/IoTSmartReginaLabDC:temp/attrs/v_l1l2","0.0")#publish
