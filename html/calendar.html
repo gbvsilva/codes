@@ -183,7 +183,6 @@ function showCalendar(month, year) {
                 } // color today's
 				cell.classList.add("btn-light");
 				cell.classList.add("date-pick");
-				//cell.setAttribute('ng-click', "send({datePicked:action()})");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 date++;
@@ -212,11 +211,6 @@ function submitDate(msg, scope) {
         }
     });
 })(scope);
-this.scope.action = function() {
-    console.log("Date Picked -> "+datePicked);
-    scope.send({payload: datePicked});
-}
-
 </script>
 
 <!-- Optional JavaScript for bootstrap -->
